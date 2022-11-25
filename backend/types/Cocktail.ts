@@ -9,7 +9,7 @@ export default interface Cocktail {
     video: string | null,
     category: string,
     IBA: string | null,
-    alcoholic: CocktailType,
+    alcoholic: boolean,
     glass: string | null,
     instructions: {
         en: string,
@@ -23,5 +23,3 @@ export default interface Cocktail {
     creativeCommonsConfirmed: boolean,
     dateModified: Date | null
 }
-
-export type CocktailType = "Alcoholic" | "Non alcoholic";

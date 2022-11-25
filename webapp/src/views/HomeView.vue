@@ -9,7 +9,6 @@
 import { defineComponent } from 'vue';
 import HelloWorld from '../components/HelloWorld.vue';
 import axios from 'axios';
-import Cocktail from '@backend/types/Cocktail';
 
 export default defineComponent({
     name: 'HomeView',
@@ -18,7 +17,6 @@ export default defineComponent({
     },
     data() {
         return {
-            cocktails: [] as Cocktail[]
         };
     },
     mounted() {

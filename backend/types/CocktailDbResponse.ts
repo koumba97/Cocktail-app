@@ -8,7 +8,7 @@ export default interface CocktailDbResponse {
     strIBA: string | null,
     strAlcoholic: "Alcoholic" | "Non alcoholic",
     strGlass: string | null,
-    strInstructions: string | null,
+    strInstructions: string,
     strInstructionsES: string | null,
     strInstructionsDE: string | null,
     strInstructionsFR: string | null,
