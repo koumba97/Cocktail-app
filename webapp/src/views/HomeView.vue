@@ -1,16 +1,18 @@
 <template>
-    <div class="home">
-        <h1>The Cocktail Db <font-awesome-icon :icon="['fas', 'martini-glass']"/> </h1>
+    <div class="home-view">
+        <h1>The Cocktail Db <font-awesome-icon :icon="['fas', 'martini-glass']"/></h1>
 
         <transition-group name="slide-left" tag="div" class="cocktails-container">
-            <CocktailCardVue 
-                v-for="cocktail of cocktails" 
+            <CocktailPreviewCard
+                v-for="cocktail of cocktails"
                 :key="cocktail.id"
                 :cocktail="cocktail"
+                @open-card="openCocktailCard"
             />
         </transition-group>
 
         <shuffle-button @click="getRandomCocktail"/>
+        <cocktail-card ref="cocktailCard"/>
     </div>
 </template>
 
@@ -18,14 +20,16 @@
 import { defineComponent } from 'vue';
 import axios, { AxiosResponse } from 'axios';
 import Cocktail from '@backend/types/Cocktail';
-import CocktailCardVue from '@/components/CocktailCard.vue';
 import ShuffleButton from "@/ui/ShuffleButton.vue";
+import CocktailPreviewCard from "@/components/CocktailPreviewCard.vue";
+import CocktailCard from "@/components/CocktailCard.vue";
 
 export default defineComponent({
     name: 'HomeView',
     components: {
+      CocktailCard,
       ShuffleButton,
-        CocktailCardVue,
+      CocktailPreviewCard,
     },
     data() {
         return {
@@ -45,17 +49,29 @@ export default defineComponent({
                     this.cocktails.push(response.data);
                 });
             }
+        },
+
+        openCocktailCard(cocktail: Cocktail){
+          (this.$refs['cocktailCard'] as any).openCard(cocktail);
         }
     }
 });
 </script>
 
 <style lang="scss" scoped>
+.home-view{
+  height: 100vh;
+  overflow: hidden;
+  h1{
+    text-align: center;
+  }
+}
 .cocktails-container{
-    display: flex;
-    flex-direction: column;
-    margin: auto auto 30px;
-    height: 450px;
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 30px;
+  height: 450px;
+  max-width: 500px;
+  overflow: hidden;
 }
 </style>

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8be3441b-4512-48d6-b76b-ef7aceb8b258" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/webapp/src/ui/AlcoholicLabel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/ui/LikeButton.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webapp/src/ui/ShuffleButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" beforeDir="false" />
@@ -33,7 +34,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/backend/server.ts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/webapp/src/components/CocktailPreviewCard.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669394210182</updated>
       <workItem from="1669394211615" duration="720000" />
-      <workItem from="1669396660025" duration="8429000" />
+      <workItem from="1669396660025" duration="13156000" />
     </task>
     <servers />
   </component>
