@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8be3441b-4512-48d6-b76b-ef7aceb8b258" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/webapp/src/ui/AlcoholicLabel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/types/Cocktail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/types/Cocktail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/backend/server.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -29,8 +47,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/webapp/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp/src/ui" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,11 +65,22 @@
       <option name="presentableId" value="Default" />
       <updated>1669394210182</updated>
       <workItem from="1669394211615" duration="720000" />
-      <workItem from="1669396660025" duration="555000" />
+      <workItem from="1669396660025" duration="5840000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

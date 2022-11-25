@@ -33,6 +33,7 @@ app.get("/random", async function (req: any, res: any) {
             instructions: {
                 en: data.strInstructions,
             },
+            thumbnail: data.strDrinkThumb,
             imageSource: data.strImageSource,
             imageAttribution: data.strImageAttribution,
             creativeCommonsConfirmed: false,
