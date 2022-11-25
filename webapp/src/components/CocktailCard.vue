@@ -14,12 +14,16 @@
     <div class="center-card-container">
       <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
       <div class="cocktail-ingredients-container">
-        <h3>Ingredients</h3>
-        <ul>
-          <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
-            {{ingredient.name}} ({{ingredient.measure}})
-          </li>
-        </ul>
+        <div>
+          <h3>Ingredients</h3>
+          <ul>
+            <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
+              {{ingredient.name}} ({{ingredient.measure}})
+            </li>
+          </ul>
+        </div>
+
+        <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
       </div>
     </div>
 
@@ -36,6 +40,7 @@
 import { defineComponent } from 'vue';
 import Cocktail from '@backend/types/Cocktail';
 import LikeButton from "@/ui/LikeButton.vue";
+import AlcoholicLabel from "@/ui/AlcoholicLabel.vue";
 
 export default defineComponent({
   name: 'CocktailCard',
@@ -46,6 +51,7 @@ export default defineComponent({
     };
   },
   components: {
+    AlcoholicLabel,
     LikeButton
 
   },
@@ -84,7 +90,6 @@ export default defineComponent({
     margin-bottom: 10px;
 
     .cocktail-name{
-      text-align: left;
       width: max-content;
       margin: 0;
     }
@@ -116,8 +121,9 @@ export default defineComponent({
     }
     .cocktail-ingredients-container{
       ul{
-        margin: 0;
         padding-left: 13px;
+        margin: 0 0 20px;
+
         li{
           font-size: 18px;
         }
@@ -126,7 +132,6 @@ export default defineComponent({
   }
 
   .cocktail-instruction{
-    text-align: left;
     font-size: 20px;
   }
 
@@ -139,6 +144,60 @@ export default defineComponent({
       height: 120px;
       border-radius: 20px;
       background-color: #e5e5e5;
+    }
+  }
+
+  @media(max-width: 400px) {
+    width: calc(100vw - 40px);
+    margin: auto auto auto -50vw;
+    .top-card-container {
+
+      .cocktail-name {
+        font-size: 25px;
+      }
+    }
+
+    .center-card-container{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 10px;
+
+      .cocktail-preview{
+        width: 100%;
+        height: 150px;
+      }
+      .cocktail-ingredients-container{
+        display: flex;
+        flex-direction: column-reverse;
+        .alcoholic-label-container{
+          margin: 10px 0 10px auto;
+        }
+        h3{
+          margin: 0;
+        }
+        ul{
+          margin-bottom: 0;
+          li{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .cocktail-instruction{
+      font-size: 15px;
+      margin: 0;
+    }
+    h3{
+      margin-bottom:0;
+    };
+    .common-cocktails-container{
+      gap: 10px;
+      .common-cocktails{
+        border-radius: 15px;
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }

@@ -74,4 +74,11 @@ export default defineComponent({
   max-width: 500px;
   overflow: hidden;
 }
+
+@media(max-width: 400px) {
+  .cocktails-container{
+    height: 400px;
+    margin-bottom: 20px;
+  }
+}
 </style>

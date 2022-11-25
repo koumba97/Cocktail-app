@@ -33,5 +33,11 @@ export default defineComponent({
       color: rgba(198, 39, 72, 0.69);
     }
   }
+
+  @media(max-width: 400px) {
+    .alcoholic-label{
+      font-size: 8px;
+    }
+  }
 }
 </style>

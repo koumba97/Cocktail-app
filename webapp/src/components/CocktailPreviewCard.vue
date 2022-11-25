@@ -2,12 +2,15 @@
     <div class="cocktail-preview-card" @click="openCocktailCard">
       <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
       <div>
-        <h4 class="cocktail-name">{{cocktail.name}}</h4>
-        <p class="cocktail-category">{{cocktail.category}}</p>
+        <div class="cocktail-preview-card-top">
+          <div>
+            <h4 class="cocktail-name">{{cocktail.name}}</h4>
+            <p class="cocktail-category">{{cocktail.category}}</p>
+          </div>
+          <like-button/>
+        </div>
         <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
       </div>
-
-      <like-button/>
     </div>
 </template>
     
@@ -60,6 +63,10 @@ export default defineComponent({
     background-size: cover;
     background-position: center;
   }
+  .cocktail-preview-card-top{
+    display: flex;
+    justify-content: space-between;
+  }
   .cocktail-name{
     margin:0;
     text-align: left;
@@ -72,6 +79,13 @@ export default defineComponent({
   }
   .like-button{
     margin-left: auto;
+  }
+
+  @media(max-width: 400px) {
+    margin: 5px 15px;
+    .cocktail-name{
+      font-size: 16px;
+    }
   }
 }
 </style>
