@@ -1,29 +1,47 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+        <transition-group name="slide-left">
+            <div class="cocktail-container" v-for="cocktail of cocktails" :key="cocktail.id">
+                {{cocktail}}
+            </div>
+        </transition-group>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '../components/HelloWorld.vue';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
+import Cocktail from '@backend/types/Cocktail';
 
 export default defineComponent({
     name: 'HomeView',
     components: {
-        HelloWorld,
     },
     data() {
         return {
+            cocktails: [] as Cocktail[],
+            cocktailsLength: 3,
         };
     },
     mounted() {
-        axios.get('/random')
-        .then(response => {
-            console.log(response);
-        })
+        this.getRandomCocktail();
+    },
+    methods: {
+        getRandomCocktail(){
+            this.cocktails = [];
+            for(let i = 0; i < this.cocktailsLength; i++) {
+                axios.get('/random')
+                .then((response: AxiosResponse<Cocktail>) => {
+                    this.cocktails.push(response.data);
+                });
+            }
+        }
     }
 });
 </script>
+
+<style scoped>
+.cocktail-container{
+    border: solid;
+}
+</style>
