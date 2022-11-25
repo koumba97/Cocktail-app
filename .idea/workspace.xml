@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8be3441b-4512-48d6-b76b-ef7aceb8b258" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/webapp/src/ui/AlcoholicLabel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/ui/ShuffleButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/types/Cocktail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/types/Cocktail.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/yarn.lock" afterDir="false" />
@@ -21,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="TypeScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -65,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669394210182</updated>
       <workItem from="1669394211615" duration="720000" />
-      <workItem from="1669396660025" duration="5840000" />
+      <workItem from="1669396660025" duration="8429000" />
     </task>
     <servers />
   </component>

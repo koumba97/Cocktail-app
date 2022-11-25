@@ -5,9 +5,12 @@
         <h4 class="cocktail-name">{{cocktail.name}}</h4>
         <p class="cocktail-category">{{cocktail.category}}</p>
         <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
-        <font-awesome-icon icon="heart" />
       </div>
 
+      <div class="like-button" @click="toggleLike">
+        <font-awesome-icon v-if="isLiked" :icon="['fas', 'heart']" :style="{color: iconColor}" size="2x"/>
+        <font-awesome-icon v-else :icon="['far', 'heart']" :style="{color: iconColor}" size="2x"/>
+      </div>
     </div>
 </template>
     
@@ -21,8 +24,19 @@ export default defineComponent({
     props: {
       cocktail: Object as () => Cocktail,
     },
+    data() {
+      return {
+        isLiked: false,
+        iconColor: 'rgba(255, 80, 116, 0.69)',
+      };
+    },
     components: {
       AlcoholicLabel,
+    },
+    methods: {
+      toggleLike(){
+        this.isLiked = !this.isLiked;
+      }
     }
 });
 </script>
@@ -45,13 +59,20 @@ export default defineComponent({
   .cocktail-name{
     margin:0;
     text-align: left;
-    font-size: 20px;
-
+    font-size: 22px;
   }
   .cocktail-category{
     margin: 0 0 10px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
+  }
+
+  .like-button{
+    cursor: pointer;
+    width: max-content;
+    position: relative;
+    height: max-content;
+    margin-left: auto;
   }
 }
 </style>

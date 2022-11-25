@@ -1,6 +1,7 @@
 <template>
     <div class="home">
-        <h1>The Cocktail Db</h1>
+        <h1>The Cocktail Db <font-awesome-icon :icon="['fas', 'martini-glass']"/> </h1>
+
         <transition-group name="slide-left" tag="div" class="cocktails-container">
             <CocktailCardVue 
                 v-for="cocktail of cocktails" 
@@ -8,6 +9,8 @@
                 :cocktail="cocktail"
             />
         </transition-group>
+
+        <shuffle-button @click="getRandomCocktail"/>
     </div>
 </template>
 
@@ -16,10 +19,12 @@ import { defineComponent } from 'vue';
 import axios, { AxiosResponse } from 'axios';
 import Cocktail from '@backend/types/Cocktail';
 import CocktailCardVue from '@/components/CocktailCard.vue';
+import ShuffleButton from "@/ui/ShuffleButton.vue";
 
 export default defineComponent({
     name: 'HomeView',
     components: {
+      ShuffleButton,
         CocktailCardVue,
     },
     data() {
@@ -49,8 +54,8 @@ export default defineComponent({
 .cocktails-container{
     display: flex;
     flex-direction: column;
-    margin: auto;
-    max-height: 800px;
+    margin: auto auto 30px;
+    height: 450px;
     max-width: 500px;
 }
 </style>
