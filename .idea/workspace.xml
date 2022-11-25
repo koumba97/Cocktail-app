@@ -12,8 +12,11 @@
       <change beforePath="$PROJECT_DIR$/webapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/components/CocktailPreviewCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/CocktailPreviewCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/ui/AlcoholicLabel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/ui/AlcoholicLabel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/views/AboutView.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/yarn.lock" afterDir="false" />
     </list>
@@ -69,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669394210182</updated>
       <workItem from="1669394211615" duration="720000" />
-      <workItem from="1669396660025" duration="14732000" />
+      <workItem from="1669396660025" duration="15003000" />
     </task>
     <servers />
   </component>

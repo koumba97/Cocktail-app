@@ -1,7 +1,7 @@
 <template>
     <div class="cocktail-preview-card" @click="openCocktailCard">
       <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
-      <div>
+      <div class="cocktail-preview-main">
         <div class="cocktail-preview-card-top">
           <div>
             <h4 class="cocktail-name">{{cocktail.name}}</h4>
@@ -63,9 +63,14 @@ export default defineComponent({
     background-size: cover;
     background-position: center;
   }
+
+  .cocktail-preview-main{
+    flex: 1;
+  }
   .cocktail-preview-card-top{
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .cocktail-name{
     margin:0;
