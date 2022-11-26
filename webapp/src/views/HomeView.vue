@@ -19,7 +19,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import axios, { AxiosResponse } from 'axios';
-import Cocktail from '@backend/types/Cocktail';
+import Cocktail from '../../types/Cocktail';
 import ShuffleButton from "@/ui/ShuffleButton.vue";
 import CocktailPreviewCard from "@/components/CocktailPreviewCard.vue";
 import CocktailCard from "@/components/CocktailCard.vue";
@@ -44,7 +44,7 @@ export default defineComponent({
         getRandomCocktail(){
             this.cocktails = [];
             for(let i = 0; i < this.cocktailsLength; i++) {
-                axios.get('/random')
+                axios.get('/api/randomCocktail')
                 .then((response: AxiosResponse<Cocktail>) => {
                     this.cocktails.push(response.data);
                 });

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8be3441b-4512-48d6-b76b-ef7aceb8b258" name="Changes" comment="" />
+    <list default="true" id="8be3441b-4512-48d6-b76b-ef7aceb8b258" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/api/randomCocktail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/types/Cocktail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/types/Cocktail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/types/CocktailDbResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/types/CocktailDbResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/types/Ingredients.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/types/Ingredients.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/types/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/types/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/unit-tests/cocktail-structure.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/unit-tests/cocktail-structure.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/CocktailCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/components/CocktailPreviewCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/components/CocktailPreviewCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/views/HomeView.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +62,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp" />
+      <recent name="$PROJECT_DIR$/webapp/api" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/webapp/src/ui" />
     </key>
@@ -62,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669394210182</updated>
       <workItem from="1669394211615" duration="720000" />
-      <workItem from="1669396660025" duration="27653000" />
+      <workItem from="1669396660025" duration="28719000" />
     </task>
     <servers />
   </component>

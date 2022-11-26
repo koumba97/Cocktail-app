@@ -1,15 +1,9 @@
-import express from "express";
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import axios, { AxiosResponse } from "axios";
-import CocktailDbResponse from "./types/CocktailDbResponse";
-import Cocktail from "./types/Cocktail";
-const app = express();
-const port = 4242;
+import CocktailDbResponse from "../types/CocktailDbResponse";
+import Cocktail from "../types/Cocktail";
 
-app.get("/", (req: any, res:any) => {
-    res.send("Hello World!");
-});
-
-app.get("/random", async function (req: any, res: any) {
+export default (req: VercelRequest, res: VercelResponse) => {
     axios.get("https://thecocktaildb.com/api/json/v1/1/random.php", {
         headers: {
             "Content-Type": "application/json",
@@ -20,17 +14,13 @@ app.get("/random", async function (req: any, res: any) {
         const data = resp.data.drinks[0] as CocktailDbResponse;
 
         const cocktail = formatCocktailStructure(data);
-        res.send(cocktail);
+        res.json(cocktail);
     })
     .catch(function (error: Error) {
         console.log(error.message);
         res.send(error);
     });
-});
-
-app.listen(port, () => {
-    console.log(`Express is listening at http://localhost:${port}`);
-});
+};
 
 export function formatCocktailStructure(data: CocktailDbResponse): Cocktail{
     const cocktail: Cocktail = {

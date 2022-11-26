@@ -16,7 +16,7 @@
     
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Cocktail from '@backend/types/Cocktail';
+import Cocktail from '../../types/Cocktail';
 import AlcoholicLabel from "@/ui/AlcoholicLabel.vue";
 import LikeButton from "@/ui/LikeButton.vue";
 

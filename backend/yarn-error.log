@@ -19,7 +19,7 @@ Trace:
 npm manifest: 
   {
     "scripts": {
-      "start": "npx ts-node-dev server.ts"
+      "start": "npx ts-node-dev randomCocktail.ts"
     },
     "dependencies": {
       "@types/express": "^4.17.14",
