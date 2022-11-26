@@ -1,4 +1,4 @@
-import { Ingredient } from "./Ingredients";
+import { Ingredient } from "./Ingredient";
 
 export default interface Cocktail {
     id: string;

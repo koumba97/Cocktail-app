@@ -1,6 +1,6 @@
 <template>
     <div class="home-view">
-        <h1>The Cocktail Db <font-awesome-icon :icon="['fas', 'martini-glass']"/></h1>
+        <h1>The Cocktail Bar <font-awesome-icon :icon="['fas', 'martini-glass']"/></h1>
 
         <transition-group name="slide-left" tag="div" class="cocktails-container">
             <CocktailPreviewCard
