@@ -1,6 +1,28 @@
 {
+  "scripts": {
+    "client": "yarn --cwd webapp/ serve",
+    "server": "yarn --cwd backend/ start",
+    "dev": "npm-run-all --parallel client server"
+  },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.56.1",
-    "sass-loader": "^13.2.0"
+    "sass-loader": "^13.2.0",
+    "typescript": "~4.5.5"
+  },
+  "dependencies": {
+    "@vercel/node": "^2.6.4",
+    "npm-run-all": "^4.1.5",
+    "vue-template-compiler": "^2.7.14"
   }
 }
