@@ -12,6 +12,7 @@
         </transition-group>
 
         <shuffle-button @click="getRandomCocktail"/>
+
         <cocktail-card ref="cocktailCard"/>
     </div>
 </template>
@@ -73,8 +74,12 @@ export default defineComponent({
 
 
 .home-view{
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  max-height: 600px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   h1{
     text-align: center;
   }
@@ -83,15 +88,33 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   margin: auto auto 30px;
+  padding: 0 15px;
   height: 450px;
   max-width: 500px;
   overflow: hidden;
+  gap: 15px;
 }
 
+.shuffle-button{
+  margin-bottom: 20px;
+}
 @media(max-width: 400px) {
   .cocktails-container{
-    height: 400px;
-    margin-bottom: 20px;
+    max-width: unset;
+    height: max-content;
+    min-height: 420px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .home-view{
+    min-height: unset;
+    max-height: 800px;
+    align-self: center;
+
+    h1{
+      font-size: 50px;
+    }
   }
 }
 </style>

@@ -43,7 +43,6 @@ export default defineComponent({
 
 <style lang="scss">
 .cocktail-preview-card {
-  margin: 15px;
   background-color: white;
   border-radius: 18px;
   padding: 10px;
@@ -52,6 +51,7 @@ export default defineComponent({
   cursor: pointer;
   border: solid transparent;
   transition-duration: .3s;
+  width: 400px;
 
   &:hover{
     border-color: lightgray;
@@ -87,10 +87,11 @@ export default defineComponent({
   }
 
   @media(max-width: 400px) {
-    margin: 5px 15px;
+    max-width: 80vw;
     .cocktail-name{
       font-size: 16px;
     }
+
   }
 }
 </style>

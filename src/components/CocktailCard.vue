@@ -1,39 +1,47 @@
 <template>
-  <div :class="['cocktail-card', isOpen ? 'open-card' : 'close-card']" >
-    <div class="top-card-container">
-      <h1 class="cocktail-name">{{cocktail.name}}</h1>
+  <div class="">
+    <div :class="['cocktail-card', isOpen ? 'open-card' : 'close-card']" >
+      <div class="top-card-container">
+        <h1 class="cocktail-name">{{cocktail.name}}</h1>
 
-      <div class="buttons-container">
-        <like-button/>
-        <div @click="closeCard" class="close-button">
-          <font-awesome-icon :icon="['fas', 'times']" size="2x"/>
+        <div class="buttons-container">
+          <like-button/>
+          <div @click="closeCard" class="close-button">
+            <font-awesome-icon :icon="['fas', 'times']" size="2x"/>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="center-card-container">
-      <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
-      <div class="cocktail-ingredients-container">
-        <div>
-          <h3>Ingredients</h3>
-          <ul>
-            <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
-              {{ingredient.name}} ({{ingredient.measure}})
-            </li>
-          </ul>
+      <div class="content">
+        <div class="center-card-container">
+          <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
+          <div class="cocktail-ingredients-container">
+            <div>
+              <h3>Ingredients</h3>
+              <ul>
+                <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
+                  {{ingredient.name}} ({{ingredient.measure}})
+                </li>
+              </ul>
+            </div>
+
+            <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
+          </div>
         </div>
 
-        <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
+        <p class="cocktail-instruction" v-if="cocktail.instructions">{{cocktail.instructions.en}}</p>
+
+        <h3>Common drinks</h3>
+        <div class="common-cocktails-container">
+          <div class="common-cocktails" v-for="n of 4" :key="`common-cocktail${n}`"></div>
+        </div>
       </div>
+
     </div>
 
-    <p class="cocktail-instruction" v-if="cocktail.instructions">{{cocktail.instructions.en}}</p>
-
-    <h3>Common drinks</h3>
-    <div class="common-cocktails-container">
-        <div class="common-cocktails" v-for="n of 4" :key="`common-cocktail${n}`"></div>
-    </div>
+    <div :class="['background-card', isOpen ? 'open-card' : 'close-card']" @click="closeCard" ></div>
   </div>
+
 </template>
 
 <script lang="ts">
@@ -68,11 +76,27 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+
+.background-card{
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  display: none;
+
+  &.open-card{
+    display: block;
+    z-index: 2;
+  }
+}
 .cocktail-card {
+  z-index: 3;
   height: 560px;
   width: 500px;
   background-color: white;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
   position: fixed;
   transition-duration: .3s;
   bottom: -600px;
@@ -81,13 +105,15 @@ export default defineComponent({
   padding: 20px;
 
   &.open-card{
-    bottom: 0
+    bottom: 0;
+    top:0;
   }
 
   .top-card-container{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 55px;
 
     .cocktail-name{
       width: max-content;
@@ -107,6 +133,10 @@ export default defineComponent({
     }
   }
 
+  .content{
+    overflow: scroll;
+    height: 515px;
+  }
   .center-card-container{
     display: flex;
     gap: 20px;
@@ -139,6 +169,7 @@ export default defineComponent({
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 15px;
     .common-cocktails{
       width: 120px;
       height: 120px;
@@ -147,11 +178,13 @@ export default defineComponent({
     }
   }
 
-  @media(max-width: 400px) {
-    width: calc(100vw - 40px);
-    margin: auto auto auto -50vw;
-    .top-card-container {
+  @media(max-width: 550px) {
+    bottom: -100vh;
+    width: 80vw;
+    height: 80vh;
+    margin-left: calc(-40vw + -20px);
 
+    .top-card-container {
       .cocktail-name {
         font-size: 25px;
       }

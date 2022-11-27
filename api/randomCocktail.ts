@@ -1,7 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import axios, { AxiosResponse } from "axios";
-import CocktailDbResponse, {CocktailArrayDbResponse} from "../types/CocktailDbResponse";
-import Cocktail from "../types/Cocktail";
+import {CocktailArrayDbResponse} from "../types/CocktailDbResponse";
 import {mapCocktailResponse} from "../functions/mapCocktailResponse";
 
 export default (req:VercelRequest, res: VercelResponse) => {
