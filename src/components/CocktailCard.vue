@@ -12,29 +12,27 @@
         </div>
       </div>
 
-      <div class="content">
-        <div class="center-card-container">
-          <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
-          <div class="cocktail-ingredients-container">
-            <div>
-              <h3>Ingredients</h3>
-              <ul>
-                <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
-                  {{ingredient.name}} ({{ingredient.measure}})
-                </li>
-              </ul>
-            </div>
-
-            <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
+      <div class="center-card-container">
+        <div class="cocktail-preview" :style="{backgroundImage: `url(${cocktail.thumbnail})`}"></div>
+        <div class="cocktail-ingredients-container">
+          <div>
+            <h3>Ingredients</h3>
+            <ul>
+              <li v-for="(ingredient, n) in cocktail.ingredients" :key="`ingredient${n}`">
+                {{ingredient.name}} ({{ingredient.measure}})
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <p class="cocktail-instruction" v-if="cocktail.instructions">{{cocktail.instructions.en}}</p>
-
-        <h3>Common drinks</h3>
-        <div class="common-cocktails-container">
-          <div class="common-cocktails" v-for="n of 4" :key="`common-cocktail${n}`"></div>
+          <alcoholic-label :is-alcoholic="cocktail.alcoholic"/>
         </div>
+      </div>
+
+      <p class="cocktail-instruction" v-if="cocktail.instructions">{{cocktail.instructions.en}}</p>
+
+      <h3>Common drinks</h3>
+      <div class="common-cocktails-container">
+        <div class="common-cocktails" v-for="n of 4" :key="`common-cocktail${n}`"></div>
       </div>
 
     </div>
@@ -79,8 +77,8 @@ export default defineComponent({
 
 .background-card{
   background-color: rgba(0, 0, 0, 0.26);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   position: fixed;
   display: none;
@@ -103,6 +101,7 @@ export default defineComponent({
   left: 50%;
   margin: auto auto auto -280px;
   padding: 20px;
+  overflow: scroll;
 
   &.open-card{
     bottom: 0;
@@ -133,10 +132,6 @@ export default defineComponent({
     }
   }
 
-  .content{
-    overflow: scroll;
-    height: 515px;
-  }
   .center-card-container{
     display: flex;
     gap: 20px;

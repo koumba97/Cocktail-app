@@ -99,6 +99,17 @@ export default defineComponent({
   margin-bottom: 20px;
 }
 @media(max-width: 400px) {
+  h1{
+    font-size: 25px;
+  }
+  .shuffle-button::v-deep{
+    h5{
+      font-size: 15px;
+    }
+  }
+}
+
+@media(max-width: 400px) {
   .cocktails-container{
     max-width: unset;
     height: max-content;

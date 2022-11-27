@@ -86,8 +86,8 @@ export default defineComponent({
     margin-left: auto;
   }
 
-  @media(max-width: 400px) {
-    max-width: 80vw;
+  @media(max-width: 550px) {
+    width: 80vw;
     .cocktail-name{
       font-size: 16px;
     }
