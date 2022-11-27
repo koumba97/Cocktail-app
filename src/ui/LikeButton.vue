@@ -1,5 +1,5 @@
 <template>
-  <div class="like-button" @click="toggleLike">
+  <div class="like-button" @click.stop="toggleLike">
     <font-awesome-icon v-if="isLiked" :icon="['fas', 'heart']" :style="{color: iconColor}" size="2x"/>
     <font-awesome-icon v-else :icon="['far', 'heart']" :style="{color: iconColor}" size="2x"/>
   </div>

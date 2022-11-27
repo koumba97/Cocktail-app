@@ -1,3 +1,6 @@
+export interface CocktailArrayDbResponse {
+    drinks : CocktailDbResponse[];
+}
 export default interface CocktailDbResponse {
     idDrink: string,
     strDrink: string,
@@ -13,6 +16,8 @@ export default interface CocktailDbResponse {
     strInstructionsDE: string | null,
     strInstructionsFR: string | null,
     strInstructionsIT: string | null,
+    "strInstructionsZH-HANS": string | null,
+    "strInstructionsZH-HANT": string | null,
     strDrinkThumb: string,
     strIngredient1: string | null,
     strIngredient2: string | null,
@@ -47,6 +52,5 @@ export default interface CocktailDbResponse {
     strImageSource: string,
     strImageAttribution: string,
     strCreativeCommonsConfirmed: "No" | "Yes",
-    dateModified: Date | null
-
+    dateModified: string | null
 }

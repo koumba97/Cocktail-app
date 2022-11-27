@@ -2,8 +2,8 @@
     <div class="home-view">
         <h1>The Cocktail Bar <font-awesome-icon :icon="['fas', 'martini-glass']"/></h1>
 
-        <transition-group name="slide-left" tag="div" class="cocktails-container">
-            <CocktailPreviewCard
+        <transition-group name="list" tag="div" class="cocktails-container">
+            <cocktail-preview-card
                 v-for="cocktail of cocktails"
                 :key="cocktail.id"
                 :cocktail="cocktail"
@@ -59,6 +59,19 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+
 .home-view{
   height: 100vh;
   overflow: hidden;
